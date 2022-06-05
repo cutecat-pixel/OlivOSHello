@@ -99,7 +99,7 @@ def Hello_count():
 
 def unity_reply(plugin_event, Proc):
     command_list = deleteBlank(plugin_event.data.message)
-    if command_list[0] == '二喵早安':
+    if command_list[0] == '早安':
         try:
             sql_base = pymysql.connect(host=DBHOST, user=DBUSER, password=DBPASS, database=DBNAME)
             cur = sql_base.cursor()
@@ -138,7 +138,7 @@ def unity_reply(plugin_event, Proc):
                     sql_base.close()
         except pymysql.Error as e:
             print(e)
-    elif command_list[0] == '二喵晚安':
+    elif command_list[0] == '晚安':
         try:
             sql_base = pymysql.connect(host=DBHOST, user=DBUSER, password=DBPASS, database=DBNAME)
             cur = sql_base.cursor()
